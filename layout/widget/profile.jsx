@@ -24,10 +24,7 @@ class Profile extends Component {
             author,
             authorTitle,
             location,
-            counter,
-            followLink,
-            followTitle,
-            socialLinks
+            counter
         } = this.props;
         return <div class="card widget" data-type="profile">
             <div class="card-content">
@@ -72,10 +69,6 @@ class Profile extends Component {
                         </div>
                     </div>
                 </nav>
-                {followLink ? <div class="level">
-                    <a class="level-item button is-primary is-rounded" href={followLink} target="_blank" rel="noopener">{followTitle}</a>
-                </div> : null}
-                {socialLinks ? this.renderSocialLinks(socialLinks) : null}
             </div>
         </div>;
     }
